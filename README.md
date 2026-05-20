@@ -1,6 +1,23 @@
 # pytest-httpx2
 
-A `pytest` plugin for mocking out `httpx2` using `respx`.
+A `pytest` plugin for mocking out [httpx2](https://httpx2.pydantic.dev/) using [respx](https://lundberg.github.io/respx/).
+
+## Install
+
+Install with `pip`, or your favourite package manager:
+
+```sh
+pip install pytest-httpx2
+```
+
+Enable the `pytest` plugin and mock fixture, e.g. in your `pyproject.toml`:
+
+```toml
+[tool.pytest]
+addopts = ["-p pytest_httpx2"]
+```
+
+## Usage
 
 ```py
 import httpx2
@@ -11,7 +28,9 @@ def test_foobar(httpx2_mock: respx.Router) -> None:
     assert response.status_code == 201
 ```
 
-## Configure using marker
+### Settings
+
+Configure the `httpx2_mock` fixture with the included marker:
 
 ```py
 import pytest
