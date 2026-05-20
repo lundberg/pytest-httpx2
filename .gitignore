@@ -1,0 +1,22 @@
+# Byte-compiled
+__pycache__/
+*.py[cod]
+
+# Distribution / packaging
+.env/
+env/
+venv/
+dist/
+node_modules/
+*.egg-info/
+
+# Unit test / coverage reports
+.coverage
+.coverage.*
+.mypy_cache/
+.pytest_cache/
+coverage.xml
+
+# Editor config
+.idea
+.tags

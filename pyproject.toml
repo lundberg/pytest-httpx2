@@ -1,0 +1,60 @@
+[build-system]
+requires = ["uv_build>=0.11.14,<0.12"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "pytest_httpx2"
+module-root = ""
+
+[project]
+name = "pytest-httpx2"
+authors = [
+  { name="Jonas Lundberg", email="jonas@5monkeys.se" },
+]
+version = "1.0.0"
+description = "A pytest plugin for mocking out httpx2 using respx."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license="BSD-3-Clause"
+license-files = ["LICENSE.md"]
+dependencies = ["respx"]
+
+[project.urls]
+GitHub = "https://github.com/lundberg/pytest-httpx2"
+Changelog = "https://github.com/lundberg/pytest-httpx2/blob/master/CHANGELOG.md"
+Issues = "https://github.com/lundberg/pytest-httpx2/issues"
+
+[project.entry-points.pytest11]
+pytest_httpx2 = "pytest_httpx2"
+
+[dependency-groups]
+dev = ["httpx2", "pytest", "mypy", "pre-commit"]
+
+[tool.pytest]
+addopts = ["-p pytester"]
+
+[tool.mypy]
+python_version = "3.10"
+pretty = true
+packages = ["pytest_httpx2", "tests"]
+
+show_error_codes = true
+no_implicit_reexport = true
+no_implicit_optional = true
+strict_equality = true
+strict_optional = true
+check_untyped_defs = true
+disallow_incomplete_defs = true
+disallow_untyped_defs = true
+ignore_missing_imports = false
+local_partial_types = true
+
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_return_any = true
+warn_unreachable = true
