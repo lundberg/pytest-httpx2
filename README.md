@@ -1,6 +1,6 @@
-# pytest-httpx2
+# pytest-HTTPX2
 
-A `pytest` plugin for mocking out [httpx2](https://httpx2.pydantic.dev/) using [respx](https://lundberg.github.io/respx/).
+A `pytest` plugin for mocking out [HTTPX2](https://httpx2.pydantic.dev/) using [RESPX](https://lundberg.github.io/respx/).
 
 ## Install
 
